@@ -1,0 +1,201 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "NLog/5.3.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NLog.Config/4.7.15": {
+        "type": "package",
+        "dependencies": {
+          "NLog": "4.7.15",
+          "NLog.Schema": "4.7.15"
+        },
+        "contentFiles": {
+          "contentFiles/any/any/NLog.config": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "NLog.config"
+          }
+        }
+      },
+      "NLog.Schema/5.3.2": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/NLog.xsd": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NLog/5.3.2": {
+      "sha512": "cQRQZuDMjSyMe9EQBnI9v55YAMMz8GAfFd6fFJ6tc/kXnG7Hze8p1I8MgvWSBG6E36wA8vSxRrlm8uSIG+SENg==",
+      "type": "package",
+      "path": "nlog/5.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "nlog.5.3.2.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Config/4.7.15": {
+      "sha512": "njc2NvwgAzEuH609TGO4yqpokcxXFdypHwG3I8hyLYIE4pr+j4KJB4ZhsyODVwkP/n2F2V4uJ24VW4icNyJMcA==",
+      "type": "package",
+      "path": "nlog.config/4.7.15",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/NLog.config",
+        "contentFiles/any/any/NLog.config",
+        "nlog.config.4.7.15.nupkg.sha512",
+        "nlog.config.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "NLog.Schema/5.3.2": {
+      "sha512": "Lnqb4Zj/If/BWwQouJu/GU201f4T+AnF9+syE5Rg+jaZkDAnn+ozDZbhHnE1LH7AeVxG71PFphMtacqjRvHB0A==",
+      "type": "package",
+      "path": "nlog.schema/5.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/NLog.xsd",
+        "contentFiles/any/any/NLog.xsd",
+        "nlog.schema.5.3.2.nupkg.sha512",
+        "nlog.schema.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "NLog >= 5.3.2",
+      "NLog.Config >= 4.7.15",
+      "NLog.Schema >= 5.3.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kevin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Coderhouse\\archivos curso c#\\Sistemadegestion\\Sistemadegestion\\Sistemadegestion.csproj",
+      "projectName": "Sistemadegestion",
+      "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Coderhouse\\archivos curso c#\\Sistemadegestion\\Sistemadegestion\\Sistemadegestion.csproj",
+      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Coderhouse\\archivos curso c#\\Sistemadegestion\\Sistemadegestion\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "NLog": {
+            "target": "Package",
+            "version": "[5.3.2, )"
+          },
+          "NLog.Config": {
+            "target": "Package",
+            "version": "[4.7.15, )"
+          },
+          "NLog.Schema": {
+            "target": "Package",
+            "version": "[5.3.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
